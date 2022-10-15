@@ -1,0 +1,171 @@
+data type's
+primitive  static memory allocation
+non primitive dynamic memoryallocation
+skilrisers
+brainmentor
+  
+  
+  
+  
+  
+  
+  //Rotate a number
+ public static void rotateNumber() {
+        int num = 12345;
+        int count = Problem.countDigit(num); 
+        int rt = -7;
+        if(rt >= 0 ){
+            while (rt>count) {
+                rt -= count;
+            }
+            int divisor = (int) Math.pow(10, rt);
+            int newnumber = num%divisor;
+            num/=divisor;
+            int copy = num;
+            newnumber = newnumber*(int) Math.pow(10, Problem.countDigit(copy)) + num;
+            System.out.println(newnumber);
+        }
+        else{
+            rt = -rt;
+            while (rt>count) {
+                rt -= count;
+            }
+            int divisor = (int) Math.pow(10, count-rt);
+            int newnumber = num/divisor;
+            num%=divisor;
+            newnumber = num*(int) Math.pow(10, Problem.countDigit(newnumber)) + newnumber;
+            System.out.println(newnumber);
+        }
+        
+    }
+  
+  
+  // lucky number
+  public static void luckyNumber() {
+        int number = 412345678;
+        int copy = number;
+        int count = Problem.countDigit(number);
+        int sum = 0;
+        for(int i=count;i>0;i--){
+                if(i%2==0){
+                   sum +=copy%10;
+                   copy /=10; 
+                }
+                else{
+                copy /=10;     
+                }
+        }
+        if (sum%9==0) {
+            System.out.println("number is lucky");
+            
+        }
+        else{
+            System.out.println("not lucky");
+        }
+    }
+	
+	
+	
+	// Reverse a number
+	import java.util.Scanner;  
+public class ReverseNumberExample3  
+{  
+ 
+public static void reverseNumber(int number)   
+{  
+if (number < 10)   
+{  
+
+System.out.println(number);  
+return;  
+}  
+else   
+{  
+System.out.print(number % 10);  
+reverseNumber(number/10);  
+}  
+}  
+public static void main(String args[])  
+{  
+System.out.print("Enter the number that you want to reverse: ");  
+Scanner sc = new Scanner(System.in);  
+int num = sc.nextInt();  
+System.out.print("The reverse of the given number is: ");    
+reverseNumber(num);  
+}  
+}
+
+
+
+// prime number
+public class PrimeExample{    
+ public static void main(String args[]){    
+  int i,m=0,flag=0;      
+  int n=3;//it is number to be check   
+  m=n/2;      
+  if(n==0||n==1){  
+   System.out.println(n+" is not prime number");      
+  }else{  
+   for(i=2;i<=m;i++){      
+    if(n%i==0){      
+     System.out.println(n+" is not prime number");      
+     flag=1;      
+     break;      
+    }      
+   }      
+   if(flag==0)  { 
+   System.out.println(n+" is prime number"); }  
+  } 
+}    
+}
+
+
+
+
+// Armstrong number
+import java.util.Scanner;  
+import java.lang.Math;  
+public class ArmstsrongNumberExample  
+{  
+  
+static boolean isArmstrong(int n)   
+{   
+int temp, digits=0, last=0, sum=0;   
+  
+temp=n;   
+ 
+while(temp>0)    
+{   
+temp = temp/10;   
+digits++;   
+}   
+temp = n;   
+while(temp>0)   
+{   
+      
+last = temp % 10;   
+
+sum +=  (Math.pow(last, digits));   
+   
+temp = temp/10;   
+}  
+  
+if(n==sum)   
+ 
+return true;      
+ 
+else return false;   
+}   
+ 
+public static void main(String args[])     
+{     
+int num;   
+Scanner sc= new Scanner(System.in);  
+System.out.print("Enter the limit: ");    
+num=sc.nextInt();  
+System.out.println("Armstrong Number up to "+ num + " are: ");  
+for(int i=0; i<=num; i++)  
+if(isArmstrong(i))   
+System.out.print(i+ ", ");  //prints the armstrong numbers 
+}   
+}
