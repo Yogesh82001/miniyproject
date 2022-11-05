@@ -1,8 +1,8 @@
-package com.yogesh.java;
+
 
 import java.io.*;
 
-public class throwsexample {
+public class throwdemo {
 	
 public static void main(String[] args) throws IOException{
 	BufferedReader br= new BufferedReader(new InputStreamReader(System.in));

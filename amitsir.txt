@@ -1,0 +1,16 @@
+find sum all odd no from 1 to n 
+find factor of any give number
+6 = 1+2+3  -> perfect number 
+145   1   4  5  
+1  
+24 
+120
+
+
+3/11/2022
+methods for  string->
+s1 by litteral A book
+s2 on java new key word
+s3 by herbot
+a book - book nikal kr dusrte me store krna h s4
+s2 me se java niklna h bass or s4+s5 java book

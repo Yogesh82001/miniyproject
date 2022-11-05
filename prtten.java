@@ -1,9 +1,10 @@
+
+import java.util.Scanner;
 class prtten {
-    /**
-     * @param args
-     */
+  
+
     public static void main(String[]args){
-        int i,j,n,k;
+       /*  int i,j,n,k;
         // partten 1
         for(i=0;i<5;i++){
             for(j=0;j<5;j++){
@@ -179,9 +180,25 @@ for(i=0;i<row;i++){
     }
     System.out.println();
 }
-
-
+*/
+// prime number 19/10/22   [prime sieve]
+  
+static boolean isprime(int num){
+    if(num%2==0||num%3==0){
+        return false;
     }
-    
-    
+}
+boolean prime =true;
+int iter=0;
+for(int i=5;i*i<num;i+=6){
+    iter++;
+    if(num%i==0||num%(i+2)==0){
+        prime false;
+        break;
+    }
+}
+System.out.println(iter + "total iteration");
+return prime;
+
+
 }
